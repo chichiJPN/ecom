@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 28, 2016 at 06:15 AM
+-- Generation Time: Apr 02, 2016 at 07:32 PM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.9
 
@@ -119,13 +119,27 @@ CREATE TABLE IF NOT EXISTS `orderdetails` (
   `DetailSKU` varchar(50) COLLATE latin1_german2_ci NOT NULL,
   `DetailQuantity` int(11) NOT NULL,
   PRIMARY KEY (`DetailID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_german2_ci AUTO_INCREMENT=77 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_german2_ci AUTO_INCREMENT=91 ;
 
 --
 -- Dumping data for table `orderdetails`
 --
 
 INSERT INTO `orderdetails` (`DetailID`, `DetailOrderID`, `DetailProductID`, `DetailName`, `DetailPrice`, `DetailSKU`, `DetailQuantity`) VALUES
+(90, 40, 992, 'Camera', 111, '', 2),
+(89, 39, 992, 'Camera', 111, '', 1),
+(88, 39, 991, 'Phone', 123, '', 1),
+(87, 39, 991, 'Phone', 123, '', 1),
+(86, 39, 991, 'Phone', 123, '', 1),
+(85, 39, 991, 'Phone', 123, '', 1),
+(84, 39, 991, 'Phone', 123, '', 1),
+(83, 39, 991, 'Phone', 123, '', 1),
+(82, 38, 991, 'Phone', 123, '', 1),
+(81, 37, 991, 'Phone', 123, '', 2),
+(80, 36, 991, 'Phone', 123, '', 2),
+(79, 35, 991, 'Phone', 123, '', 1),
+(78, 34, 991, 'Phone', 123, '', 1),
+(77, 33, 992, 'Camera', 111, '', 1),
 (76, 32, 993, 'Nice Laptop', 86.58, '', 1),
 (75, 31, 991, 'Phone', 123, '', 1),
 (74, 30, 994, 'Mug', 24, '', 1),
@@ -173,7 +187,7 @@ CREATE TABLE IF NOT EXISTS `orders` (
   KEY `OrderUserID` (`OrderUserID`),
   KEY `OrderStatus` (`OrderStatus`),
   KEY `OrderUserName` (`OrderUserName`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_german2_ci AUTO_INCREMENT=33 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_german2_ci AUTO_INCREMENT=47 ;
 
 --
 -- Dumping data for table `orders`
@@ -186,7 +200,21 @@ INSERT INTO `orders` (`OrderID`, `OrderUserID`, `HashID`, `OrderUserName`, `Orde
 (29, 32, 'anjqbvsdoj9819bemfa0rtg1h4', 'Junichi Miyahara', 579, '', 'Some where very far away', '', '12313123', NULL, 'junichi', '2016-03-27 15:53:49', 1, 'fordelivery', 0, '000029-032716-000005', 0, 'cashondeliver', NULL),
 (30, 32, 'anjqbvsdoj9819bemfa0rtg1h4', 'Junichi Miyahara', 369, '', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the ', '', '123', NULL, 'junichi', '2016-03-27 17:08:23', 1, 'delivered', 0, '000030-032716-000004', 0, 'cashondeliver', NULL),
 (32, 32, 'anjqbvsdoj9819bemfa0rtg1h4', 'Junichi Miyahara', 86.58, '', 'qeqwewqe', '', '123', NULL, 'junichi', '2016-03-28 03:15:30', 1, 'processing', 0, '000032-032816-000001', 0, 'cashondeliver', NULL),
-(31, 32, 'anjqbvsdoj9819bemfa0rtg1h4', 'Junichi Miyahara', 123, '', 'asdadsad', '', '123123', NULL, 'junichi', '2016-03-28 02:50:41', 1, 'fordelivery', 0, '000031-032816-000001', 0, 'cashondeliver', NULL);
+(31, 32, 'anjqbvsdoj9819bemfa0rtg1h4', 'Junichi Miyahara', 123, '', 'asdadsad', '', '123123', NULL, 'junichi', '2016-03-28 02:50:41', 1, 'fordelivery', 0, '000031-032816-000001', 0, 'cashondeliver', NULL),
+(33, 32, 'anjqbvsdoj9819bemfa0rtg1h4', 'Junichi Miyahara', 111, '', 'w', '', '2', NULL, 'junichi', '2016-03-28 12:10:27', 1, 'processing', 0, '000033-032816-000001', 0, 'cashondeliver', NULL),
+(34, 32, 'anjqbvsdoj9819bemfa0rtg1h4', 'Junichi Miyahara', 123, '', 'qqweqe qwe qwe qw eqe q', '', '123123', NULL, 'junichi', '2016-04-02 15:30:51', 1, 'processing', 0, '000034-040216-000001', 0, 'cashondeliver', NULL),
+(35, 32, 'anjqbvsdoj9819bemfa0rtg1h4', 'Junichi Miyahara', 123, '', 'qweqweqw', '', '21321', NULL, 'junichi', '2016-04-02 15:31:31', 1, 'processing', 0, '000035-040216-000001', 0, 'cashondeliver', NULL),
+(36, 32, 'anjqbvsdoj9819bemfa0rtg1h4', 'Junichi Miyahara', 246, '', 'qweqweqwe qwe qwe', '', '23132', NULL, 'junichi', '2016-04-02 15:31:51', 1, 'processing', 0, '000036-040216-000002', 0, 'cashondeliver', NULL),
+(37, 32, 'anjqbvsdoj9819bemfa0rtg1h4', 'Junichi Miyahara', 246, '', 'qweqw qe qwe qw eq', '', '123123', NULL, 'junichi', '2016-04-02 15:32:14', 1, 'processing', 0, '000037-040216-000002', 0, 'cashondeliver', NULL),
+(38, 32, 'anjqbvsdoj9819bemfa0rtg1h4', 'Junichi Miyahara', 123, '', 'qweqw qwe qwe ', '', '123123', NULL, 'junichi', '2016-04-02 15:33:27', 1, 'processing', 0, '000038-040216-000001', 0, 'cashondeliver', NULL),
+(39, 32, 'anjqbvsdoj9819bemfa0rtg1h4', 'Junichi Miyahara', 849, '', 'qeqwe', '', '123', NULL, 'junichi', '2016-04-02 16:05:13', 1, 'processing', 0, '000039-040216-000001', 0, 'cashondeliver', NULL),
+(40, 32, 'anjqbvsdoj9819bemfa0rtg1h4', 'Junichi Miyahara', 100000, '', 'qweqwe', '', '123', NULL, 'junichi', '2016-04-02 17:04:26', 0, 'processing', 0, NULL, 0, 'cashondeliver', NULL),
+(41, 32, 'anjqbvsdoj9819bemfa0rtg1h4', 'Junichi Miyahara', 100000, '', 'qweqwe', '', '123', NULL, 'junichi', '2016-04-02 17:05:11', 0, 'processing', 0, NULL, 0, 'cashondeliver', NULL),
+(42, 32, 'anjqbvsdoj9819bemfa0rtg1h4', 'Junichi Miyahara', 100000, '', 'qweqwe', '', '123', NULL, 'junichi', '2016-04-02 17:05:47', 0, 'processing', 0, NULL, 0, 'cashondeliver', NULL),
+(43, 32, 'anjqbvsdoj9819bemfa0rtg1h4', 'Junichi Miyahara', 100000, '', 'qweqwe', '', '123', NULL, 'junichi', '2016-04-02 17:05:55', 0, 'processing', 0, NULL, 0, 'cashondeliver', NULL),
+(44, 32, 'anjqbvsdoj9819bemfa0rtg1h4', 'Junichi Miyahara', 100000, '', 'qweqwe', '', '123', NULL, 'junichi', '2016-04-02 17:10:00', 0, 'processing', 0, NULL, 0, 'cashondeliver', NULL),
+(45, 32, 'anjqbvsdoj9819bemfa0rtg1h4', 'Junichi Miyahara', 100000, '', 'qweqwe', '', '123', NULL, 'junichi', '2016-04-02 17:11:06', 0, 'processing', 0, NULL, 0, 'cashondeliver', NULL),
+(46, 32, 'anjqbvsdoj9819bemfa0rtg1h4', 'Junichi Miyahara', 100000, '', 'qweqwe', '', '123123', NULL, 'junichi', '2016-04-02 17:11:26', 0, 'processing', 0, NULL, 0, 'cashondeliver', NULL);
 
 -- --------------------------------------------------------
 
@@ -260,7 +288,7 @@ CREATE TABLE IF NOT EXISTS `products` (
   `ProductImage` varchar(100) COLLATE latin1_german2_ci NOT NULL,
   `ProductCategoryID` int(11) DEFAULT NULL,
   `ProductUpdateDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `ProductStock` float DEFAULT NULL,
+  `ProductStock` int(10) unsigned DEFAULT NULL,
   `ProductLive` tinyint(1) DEFAULT '0',
   `ProductUnlimited` tinyint(1) DEFAULT '1',
   `ProductLocation` varchar(250) COLLATE latin1_german2_ci DEFAULT NULL,
@@ -275,8 +303,8 @@ CREATE TABLE IF NOT EXISTS `products` (
 --
 
 INSERT INTO `products` (`ProductID`, `ProductSKU`, `ProductName`, `ProductPrice`, `ProductWeight`, `ProductCartDesc`, `ProductShortDesc`, `ProductLongDesc`, `ProductThumbID`, `ProductImage`, `ProductCategoryID`, `ProductUpdateDate`, `ProductStock`, `ProductLive`, `ProductUnlimited`, `ProductLocation`, `Featured`, `Discount`) VALUES
-(991, '', 'Phone', 123, 0, 'A cart description', 'A short descripton', 'A long description', 34, '', 3, '2016-02-29 11:34:30', 5, 1, 1, NULL, 1, 0),
-(992, '', 'Camera', 111, 0, 'cart', 'long', 'short', 33, '', 1, '2016-03-01 03:24:57', 2, 1, 1, NULL, 1, 0),
+(991, '', 'Phone', 123, 0, 'A cart description', 'A short descripton', 'A long description', 34, '', 3, '2016-02-29 11:34:30', 0, 1, 1, NULL, 1, 0),
+(992, '', 'Camera', 111, 0, 'cart', 'long', 'short', 33, '', 1, '2016-03-01 03:24:57', 1, 1, 1, NULL, 1, 0),
 (993, '', 'Nice Laptop', 111, 0, 'cart', 'long', 'short', 31, '', 1, '2016-03-01 03:35:41', 2, 1, 1, NULL, 1, 22),
 (994, '', 'Mug', 24, 0, 'Description', 'Description', 'Description', 35, '', 6, '2016-03-08 09:40:45', 12, 1, 1, NULL, 0, 22),
 (1004, '', 'Fan', 123.23, 0, 'This is a nice fan', 'This is a very nice fan', 'A nice fan', 39, '', 1, '2016-03-27 15:55:39', 111, 1, 1, NULL, 1, 2),
@@ -306,7 +334,7 @@ CREATE TABLE IF NOT EXISTS `sessions` (
   PRIMARY KEY (`sessionID`),
   UNIQUE KEY `HashID` (`HashID`),
   UNIQUE KEY `UserID` (`UserID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
 
 --
 -- Dumping data for table `sessions`
@@ -314,7 +342,9 @@ CREATE TABLE IF NOT EXISTS `sessions` (
 
 INSERT INTO `sessions` (`sessionID`, `HashID`, `UserID`, `dateCreated`, `lastUpdated`, `sessionData`) VALUES
 (5, 'qovjft7vca04mo0dtsq9j7l9l7', 35, '2016-03-16 22:48:36', '2016-03-16 22:48:36', ''),
-(10, 'anjqbvsdoj9819bemfa0rtg1h4', 32, '2016-03-18 12:42:17', '2016-03-28 05:15:15', '');
+(10, 'anjqbvsdoj9819bemfa0rtg1h4', 32, '2016-03-18 12:42:17', '2016-04-02 19:11:17', 'a:1:{i:992;a:1:{s:8:"quantity";i:2;}}'),
+(11, 'vmgrhn9q6gm6ha3mcbqkb7eqb2', NULL, '2016-03-28 20:08:59', '2016-03-28 14:09:02', 'a:2:{i:992;a:1:{s:8:"quantity";i:1;}i:993;a:1:{s:8:"quantity";i:1;}}'),
+(12, '44mcmhcbg7p25rcp94aq57hrh0', NULL, '2016-04-02 23:30:08', '2016-04-02 23:30:08', 'a:1:{i:991;a:1:{s:8:"quantity";i:1;}}');
 
 -- --------------------------------------------------------
 
